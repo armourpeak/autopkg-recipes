@@ -25,7 +25,7 @@ import requests
 
 __all__ = ["SlackerAP"]
 
-class Slacker(Processor):
+class SlackerAP(Processor):
     description = ("Posts to Slack via webhook based on output of a MunkiImporter. "
                     "Based on Graham Pugh's slacker.py - https://github.com/grahampugh/recipes/blob/master/PostProcessors/slacker.py"
                     "and "
@@ -91,5 +91,5 @@ class Slacker(Processor):
 
 
 if __name__ == "__main__":
-    processor = Slacker()
+    processor = SlackerAP()
     processor.execute_shell()
