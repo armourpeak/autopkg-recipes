@@ -23,7 +23,7 @@ import requests
 
 # Set the webhook_url to the one provided by Slack when you create the webhook at https://my.slack.com/services/new/incoming-webhook/
 
-__all__ = ["Slacker"]
+__all__ = ["SlackerAP"]
 
 class Slacker(Processor):
     description = ("Posts to Slack via webhook based on output of a MunkiImporter. "
