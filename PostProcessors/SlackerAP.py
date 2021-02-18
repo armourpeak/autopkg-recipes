@@ -46,6 +46,10 @@ class Slacker(Processor):
         "webhook_url": {
             "required": False,
             "description": ("Slack webhook.")
+        },
+        "slack_token": {
+        	"required": False,
+        	"description": ("Bot token")
         }
     }
     output_variables = {
@@ -63,7 +67,6 @@ class Slacker(Processor):
         ICONEMOJI = ":ghost:"
         AUTOPKGICON = "https://avatars0.githubusercontent.com/u/5170557?s=200&v=4"
         USERNAME = "AutoPKG"
-        slack_token = 'xoxb-230025915441-1775178689988-9AhJw7QJYhrTVeeiOO4WQuvW'
         slack_channel = '#sps'
         slack_icon_url = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTuGqps7ZafuzUsViFGIremEL2a3NR0KO0s0RTCMXmzmREJd5m4MA&s'
         slack_user_name = 'SPS bot'
