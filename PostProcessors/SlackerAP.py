@@ -61,6 +61,7 @@ class SlackerAP(Processor):
         was_imported = self.env.get("munki_repo_changed")
         munkiInfo = self.env.get("munki_info")
         webhook_url = self.env.get("webhook_url")
+        slack_token = self.env.get("slack_token")
         slack_channel = self.env.get("slack_channel")
 
         # Slack Custom Settings
