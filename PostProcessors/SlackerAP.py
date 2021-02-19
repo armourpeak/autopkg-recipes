@@ -68,6 +68,7 @@ class SlackerAP(Processor):
         ICONEMOJI = ":ghost:"
         AUTOPKGICON = "https://avatars0.githubusercontent.com/u/5170557?s=200&v=4"
         USERNAME = "SPS Bot"
+        API_ENDPOINT = "https://slack.com/api/chat.postMessage"
         slack_channel = "#sps"
         slack_icon_url = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTuGqps7ZafuzUsViFGIremEL2a3NR0KO0s0RTCMXmzmREJd5m4MA&s"
 
@@ -82,7 +83,7 @@ class SlackerAP(Processor):
                 slack_data = {'token': slack_token, 'text': slack_text, 'channel': slack_channel, 'icon_url': slack_icon_url, 'username': USERNAME}
 
                 response = requests.post(
-                'https://slack.com/api/chat.postMessage', json=slack_data)
+                API_ENDPOINT, json=slack_data)
                 if response.status_code != 200:
                     raise ValueError(
                                 'Request to slack returned an error %s, the response is:\n%s'
