@@ -62,15 +62,14 @@ class SlackerAP(Processor):
         munkiInfo = self.env.get("munki_info")
         webhook_url = self.env.get("webhook_url")
         slack_token = self.env.get("slack_token")
-        slack_channel = self.env.get("slack_channel")
+       # slack_channel = self.env.get("slack_channel")
 
         # Slack Custom Settings
         ICONEMOJI = ":ghost:"
         AUTOPKGICON = "https://avatars0.githubusercontent.com/u/5170557?s=200&v=4"
-        USERNAME = "AutoPKG"
-        slack_channel = '#sps'
-        slack_icon_url = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTuGqps7ZafuzUsViFGIremEL2a3NR0KO0s0RTCMXmzmREJd5m4MA&s'
-        slack_user_name = 'SPS bot'
+        USERNAME = "SPS Bot"
+        slack_channel = "#sps"
+        slack_icon_url = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTuGqps7ZafuzUsViFGIremEL2a3NR0KO0s0RTCMXmzmREJd5m4MA&s"
 
         if was_imported:
             name = self.env.get("munki_importer_summary_result")["data"]["name"]
